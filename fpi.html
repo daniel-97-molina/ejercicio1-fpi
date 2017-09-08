@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio-FPI</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+  <label>Usuario:</label>
+  <input type="text" id="txtUsuario"/>
+  <label>Contraseña:</label>
+  <input type="password" id="txtContrasena"/>
+  <input id="btnlogin" type="submit" value="Login"/>
+  <br>
+  <label id="respuesta"></label>
+  <script>
+
+    document.getElementById("btnlogin").addEventListener("click", function(event){
+        var sUsuario = document.getElementById("txtUsuario").value;
+        var sContrasena = document.getElementById("txtContrasena").value;
+        var sSalida;
+        console.log(sUsuario);
+        console.log(sContrasena);
+
+        if(sUsuario==="admin" && sContrasena==="admin"){
+            sSalida=new Date();
+        }else{
+          sSalida="Ha ocurrido un error...";
+        }
+
+        document.getElementById("respuesta").innerHTML=sSalida;
+    });
+
+
+
+
+  </script>
+</body>
+
+</html>
